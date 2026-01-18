@@ -102,7 +102,7 @@ I have been trying to balance "life," today decided to wrp this up today...
 
     2. Create a requirements.txt file ✅
 
-    3. Push to Git Hub
+    3. Push to Git Hub ✅
 
     4. Post assignment.
 
