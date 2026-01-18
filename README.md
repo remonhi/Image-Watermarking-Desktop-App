@@ -104,8 +104,13 @@ I have been trying to balance "life," today decided to wrp this up today...
 
     3. Push to Git Hub ✅
 
-    4. Post assignment.
+    4. Post assignment. ✅
 
         a. Layout top line approach
         b. Note lesson learned
         c. Share code via Git Hub
+
+
+Yeah, I had a lot of ideas in my mind about how Pillow and Tkinter worked together. I probably would have done everything with Pillow, but wanted to build a "foundation" with Tkinter and for future projects. With that, I definitely made this all more complicated than necessary; however, it was a good learning experience. With that, I progressed through 3 different approaches on how to make this work best. With that, I ended up looking at a lot of documentation, doing Google searches (that opened my eyes about some things); and, once had to "cheat" a little with using an LMM. The best lesson with LMM is it does not "write" code but just helps with search. As a developer, work still has to be done to make the code match the requirements.
+
+
