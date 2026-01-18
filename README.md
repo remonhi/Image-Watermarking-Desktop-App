@@ -2,12 +2,9 @@
 
 ## Requirements
 
-Using what you have learnt about Tkinter, you will create a desktop application with a Graphical User Interface (GUI) where you can upload an image and use Python to add a watermark logo/text.
-Normally, you would have to use an image editing software like Photoshop to add the watermark, but your program is going to do it automatically. Use case: e.g you want to start posting your photos to Instagram but you want to add your website to all the photos, you can now use your software to add your website/logo automatically to any image.
+Using what I have learned about Tkinter, I created a very basic program to upload an image and add a watermark logo and text. For now, I just took the 'Loren Ipsum' approach, but this is just "foundation" code to demostrate the CAPABILTY and CONVENTIONS of my code. Normally, anyone would have just use an image editing software like Photoshop to add the watermark, but your program does it going to do it automatically.
 
-A similar online service is: https://watermarkly.com/
-
-You might need..
+I used the following documentation for help...
 
     https://pypi.org/project/Pillow/
 
@@ -17,12 +14,11 @@ You might need..
 
 ## My Notes
 
-1/6/26
+1/6/26, Getting Organized
 
 Okay, I just took this day to start getting organized. Having not used Tkinter in a while I decided to go back to Day 20 to look at teh projects there. I decided to refresh on my code for the 'Snake Game.' Also, it is using OOP that is great. So for today, I just copied all the code over and laid out plans for tomorrow.
 
 With an small window of time, I decided to do a little preparation...
-
 
     Initialized the virtual environment → python -m venv venv
         Activated the virtual environemtn → source venv/bin/activate
@@ -31,118 +27,84 @@ With an small window of time, I decided to do a little preparation...
             git init
             git add .
             git commit -m "initial commit"
-        Noted old Git Ignore still there → cat .gitignore
         Set branch name → git branch -M main
-        Created new repo at Gig Hub → https://github.com/remonhi/Tic-Tac-Toe
-        Connected to net repo → git remote add origin git@github.com:remonhi/Tic-Tac-Toe.git
+        Created new repo at Gig Hub → https://github.com/remonhi/Image-Watermarking-Desktop-App
+        Connected to net repo → git remote add origin git@github.com:remonhi/Image-Watermarking-Desktop-App.git
         Pushed → git push -u origin main
 
+    ...then, turned out the code I wanted use was a different module - 158.py. Thas had a module just for one class, so moved it into the "main."
 
+        1. Moved Food() class ✔️
+        2. Broke Snake() class 🥺
+        3. Noted that ScoreBoard() class still needs to be moved 😐
 
+1/7/26, Chasing Squirel
 
-1/7/26
+    1. Recover the Snake() and make it work.✅
+    2. Move the ScoreBoard() class and make it work in same file...created lib.py. ✅
+    3. Get rid of var.py refernce. ✅
+    4. Get file cleaned up to match my CONVENTIONS.✅
+    5. Figure out everything in program works.✅
+    6. Review the service https://watermarkly.com/ - Hmmm, very nice...so why am I doing this. ✅
+    7. Study https://pypi.org/project/Pillow/, https://docs.python.org/3/library/tkinter.html and little Googling. ✅
+        a. Ran through the basic installation.
+        b. Used the tutorial to get familar with the library
+        c. Wow, converting files is simply changing the extention.
+        d. Yeah, more than 90 minutes going through tutorial but gave me a lot understanding and ideas
+        e. 'Image Enhancement' seems to be what this is all about...
+            i. First, went down a rabbit hole for how to display image (had to use Tkinter)
+            ii. PICK BACK UP AT 'Image Enhancement'
 
-1. Get 150.py working again, but rename to snake.py (and use my CONVENTIONAL FORMATING)
-2. Review the service https://watermarkly.com/
-3. Study https://pypi.org/project/Pillow/, https://docs.python.org/3/library/tkinter.html and little Googling.
-4. Initalize the project development space.
-5. Layout plans for building this out.
+1/16/26, Regrouping Work & expereimenting
 
-This one really got me thinking. First, I was not going to post to my portfolio website. Second, should I use an array or a dictionary. 3rd, how to make it displa and how to select the location. Anyway, to get started I just copied over one of my previous text based programs.
+As the cliche goes, "life happens" but back on this now...
 
-1/3/26
+    1. Setup the "GUI Enviroment" with Tkinter ✅
 
-I started the day with...
+    2. Read in file to be processed from command line (give it an FTP style...from and to) ✅
+        a. If no arguemnts, have a default (find the Xolo dog).
+        b. If something wrong with arguement, let the user know.
 
-    1.  Cleaning up the files (not needed) ✅
+    3. Display the input file. ✅
+        a. Using Tkinter documentation, it worked the first time.
+        b. Yet, kept displaying a bottom of screen.
+        c. Then, got centered but image cut off
+        d. Search the "inter web" for solution and it was .geometry() method
+        e. This was a "rabbit hole" but better to fix now than later.
 
-    2.  Updating main.py to the most basic needs (and installing modules as nededed) ✅
+    4. Create the output file. ✅
+        a. First, just test the creation...going back to Pillow docuentation at https://pypi.org/project/Pillow/ ✔️
+        b. Decided to use black and white as test.  ✔️
+        c. Went down another rabbit hole to diplay both images at same time. ✔️
 
-    3.  Get overview for project ✅
+    5. Upgrade Python ✅
+        a. Went down rabbit hole to upgrade version of Python 🐰
+        b. Was running version 3.13.3 🐍
+        c. The lastest is 3.14.2 from December 5, 2025 🗓️
+        d. Downloaded and stalled via PKG 🍎
+        e. Had to take a few more steps to get it working (rebuilding virtual environment). 👍🏾
+        f. Saved the requirements.txt 💿
 
-        Using what you have learnt about Python programming, you will build a text-based version of the Tic Tac Toe game. The game should be playable in the command line just like the Blackjack game we created on Day 11. It should be a 2-player game, where one person is "X" and the other plays "O".
+1/18/26, Finally getting this done
 
-        This is a simple demonstration of how the game works:
-        https://www.google.com/search?q=tic+tac+toe
+I have been trying to balance "life," today decided to wrp this up today...
 
-        You can choose how you want your game to look. The simplest is to create a game board using "|" and "\_" symbols. But the design is up to you.
+    1. Process watermark ✅
+        a. Come up with a generic graphic for the watemark. ✔️
+        b. Place the watermark in bottom left corner. ✔️
+        c. Use 'Lorem Ipsum' for text to display after image. ❌
 
-        If you have more time, you can challenge yourself to build an AI player to play the game with you.
+    2. Don't get fancy here ✅
+        a. Yes, for now just trying to figure this out.
+        b. Later, can get fancy with my "real world" programs.
 
-    4.  Setup Git and Git Hub (to save for later) ✅
+    3. Clean up (and test) the code. ✅
 
-        Removed old virtual environment → rm -rf venv
-        Removed the old git tracking → rm -rf .git
-        Initialized the virtual environment → python -m venv venv
-        Activated the virtual environemtn → source venv/bin/activate
-        Initlaized a new repo →
-        git init
-        git add .
-        git commit -m "initial commit"
-        Noted old Git Ignore still there → cat .gitignore
-        Set branch name → git branch -M main
-        Created new repo at Gig Hub → https://github.com/remonhi/Tic-Tac-Toe
-        Connected to net repo → git remote add origin git@github.com:remonhi/Tic-Tac-Toe.git
-        Pushed → git push -u origin main
+    2. Create a requirements.txt file ✅
 
-    5.  Last, laid out my approach... ✅
+    3. Push to Git Hub
 
-        1. Ask if want to play.
-        2. Setup coin flip (using my weather station).
-        3. Create the game board.
-        4. Outline all the possible "wins"
-        5. Address how to select location.
-        6. Figure out how to "stategize" next move of computer.
-        7. Determeine when game is won or stalemate
-        8. Ask to play a new game.
-
-Alright, got started. I completed the following...
-
-    - Ask if want to play. ✅
-    - Setup coin flip (using location of ISS just for the fun of using an API). ✅
-    - Create the game board. ✅
-    - Address how to select location.✅
-
-I had enough for today, so cleaned up it up and did a little plannign for next day.
-
-1/5/26
-
-Well, I missed a couple of days. Unfortuately and forutnatley, I have other things going on in my life besides codidng. Anyway, I had about an hour to "play" today.l
-
-    1. Prevent "duplicates" for selecting a cell already picked.✅
-        a. First, telling USER something is already picked.✔️
-        b. Tell COMPUTER to try again. ✔️
-
-    2. Check for wins (right after play) ✅
-        a. Tried a lot of weird stuff and go it working, but it was ugly. ✔️
-        b. Check with Copilot and got something slightly cleaner. ✔️
-        c. Actually, returning True or False played very well into my logic strutucture that addressed stalemale. ✔️
-
-    3. Come up with strategy logic. ❌
-
-    4. Ask to play a new game. ✅
-        a. Okay, this really changed my logic...had to set some flags. ✔️
-        b. Need to review "NEW" game flag. ✔️
-        c. Address duplciate of "resetting" the board array. ✔️
-        d. Assign whoever goes first the X. ✔️
-
-    5. Regineer the coin flip ✅
-        a. Move into a function
-        b. The function shoudl all selecting Head or Tails and returnign Heads or Tails
-
-1/?/26 - THE END
-
-    1. Clean up (and test) the code. ✅
-        a. Had the wife test, and found issue with checking win. ✔️
-        b. Cleaned up debugging. ✔️
-        c. Skimmed once more.✔️
-        d. Ran a few more times until a stalemate. ✔️
-            i. Found a problem...seems to flip with playhing again.
-            ii. Had to change the 'game' flag
-
-    2. Push to Git Hub
-
-    3. Post assignment.
+    4. Post assignment.
 
         a. Layout top line approach
         b. Note lesson learned
